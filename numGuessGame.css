@@ -1,0 +1,119 @@
+body {
+    font-family: helvetica, arial, verdana, sans-serif;
+}
+input {
+	font-size: 2.4em;
+	background-color: transparent;
+	text-align: center;
+	border-width: 2px;
+	width: 100%;
+	margin: 0 .2em .1em 0;
+	color: cyan;
+}
+label {
+	display: block;
+	font-size: .8em;
+}
+button {
+	color: #444;
+	background-color: #B5B198;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	font-weight: bold;
+}
+button:hover, button:active, button:focus {
+	background-color: #CBC7AE;
+}
+.main {
+	display: flex;
+	width: 1000px;
+	border-width: 2px;
+	border-style: solid;
+    margin-left: 20%;
+    margin-top: 1%;
+}
+.box {
+	background-color: #444;
+	color: #C4BE92;
+	text-align: center;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	padding: .8em .8em .5em;
+	width: 16em;
+	margin: 0 auto;
+	-webkit-box-shadow: 0px 0px 12px 0px #000;
+	box-shadow: 0px 0px 12px 0px #000;
+}
+.guessCheckBox {
+	display: flex;
+	width: 16em;
+	height: 3.7em;
+}
+.guessBox {
+	display: flex;
+	height: 3.7em;
+}
+.numberBox{
+	display: flex;
+	height: 3.7em;
+	margin-top: 10px;
+    margin-bottom: 20px;
+}
+.dotsDiv {
+	width: 5em;
+}
+.dot {
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	margin: 0 .2em 0 0;
+	display: inline-block;
+}
+.red {
+	background-color: red;
+}
+.green {
+	background-color: green;
+}
+.orange {
+	background-color: orange;
+}
+.checkGuessButton {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.infoDivBox {
+	width: 21em !important;
+    text-align: initial;
+}
+.textLabel {
+	font-size: 1em;
+    font-weight: bold;
+}
+.numberDiv {
+	text-align: center;
+}
+.informationDiv {
+	padding: 10px;
+	border-right: 2px solid;
+}
+.guessDiv {
+	padding: 10px 25px 10px 25px;
+}
+#messageDiv {
+	color: red;
+}

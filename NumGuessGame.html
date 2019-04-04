@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>NumberGuessGame</title>
+  <link rel="stylesheet" href="numGuessGame.css" />
+</head>
+<body>
+	<div class="main">
+		<div class="informationDiv">
+			<div class="numberDiv">
+				<label class="textLabel">Number 2 Guess</label>
+				<div class="box numberBox">
+					<input type="text" name="digit1" value="X" disabled>
+					<input type="text" name="digit2" value="X" disabled>
+					<input type="text" name="digit3" value="X" disabled>
+					<input type="text" name="digit4" value="X" disabled>
+				</div>
+			</div>
+			<div class="infoDiv">
+				<div class="box infoDivBox">
+					<p>	INSTRUCTIONS!!!<br/><br/>
+						   Guess the 4 digit number(unique digits) in 10 attempts.<br/><br/>
+						   Check the accuracy of your guess by clicking on the 'Check your Guess' button.<br/><br/>
+						   <mark class="green">GREEN</mark> dots shows no. of correct digits guessed at their correct place.<br/><br/>
+						   <mark class="orange">ORANGE</mark> dots shows no. of correct guessed digits but at wrong place.<br/><br/>
+						   <mark class="red">RED</mark> dots shows no. of wrong digits guessed.<br/>
+					</p>
+				</div>
+			</div>
+			<div id="messageDiv"></div>
+		</div>
+		<div class="guessDiv">
+			<table style="width:100%" id="mainTable">
+				<tr>
+				  <th>Guess the Number</th>
+				  <th>Guess Accuracy</th> 
+				</tr>
+				<tr>
+				  <td>
+					<div class="box guessBox">
+						<input type="number" name="digit1" min="0" max="9" onkeypress="shiftFocus(this,'digit1')">
+						<input type="number" name="digit2" min="0" max="9" onkeypress="shiftFocus(this,'digit2')">
+						<input type="number" name="digit3" min="0" max="9" onkeypress="shiftFocus(this,'digit3')">
+						<input type="number" name="digit4" min="0" max="9">
+					</div>
+				  </td>
+				  <td>
+					<div class="box guessCheckBox">
+					  <div class="dotsDiv">
+						<div class="upperDotsDiv">
+						  <span name="dot1" class="dot red"></span>
+						  <span name="dot2" class="dot red"></span>
+						</div>
+						<div class="lowerDotsDiv">
+						  <span name="dot3" class="dot red"></span>
+						  <span name="dot4" class="dot red"></span>
+						</div>
+					  </div>
+					  <div class="checkGuessButtonDiv">
+						<button class="checkGuessButton" name="checkButton" onclick="compareNumbers(this)">Check Your Guess</button>
+					  </div>
+					</div>
+				  </td>
+				</tr>
+			</table>
+		</div>
+	</div> 
+	<div style="display:none">
+		<table style="width:100%" id="mainTable">
+			<tr>
+			  <th>Guess the Number</th>
+			  <th>Guess Accuracy</th> 
+			</tr>
+			<tr id="rowToClone">
+			  <td>
+				<div class="box guessBox">
+					<input type="number" name="digit1" min="0" max="9" onkeypress="shiftFocus(this,'digit1')">
+					<input type="number" name="digit2" min="0" max="9" onkeypress="shiftFocus(this,'digit2')">
+					<input type="number" name="digit3" min="0" max="9" onkeypress="shiftFocus(this,'digit3')">
+					<input type="number" name="digit4" min="0" max="9">
+				</div>
+			  </td>
+			  <td>
+				<div class="box guessCheckBox">
+				  <div class="dotsDiv">
+					<div class="upperDotsDiv">
+					  <span name="dot1" class="dot red"></span>
+					  <span name="dot2" class="dot red"></span>
+					</div>
+					<div class="lowerDotsDiv">
+					  <span name="dot3" class="dot red"></span>
+					  <span name="dot4" class="dot red"></span>
+					</div>
+				  </div>
+				  <div class="checkGuessButtonDiv">
+					<button class="checkGuessButton" name="checkButton" onclick="compareNumbers(this)">Check Your Guess</button>
+				  </div>
+				</div>
+			  </td>
+			</tr>
+		</table>
+	</div>
+	<script src="numGuessGame.js"></script>
+</body>
+</html>
